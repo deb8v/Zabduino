@@ -1,4 +1,9 @@
 Z
+//Настоятельно не рекомендую использовать этот модуль в своих решениях. Помимо большой цены вы получите в подарок необходимость фильтрации значений и вероятные ошибки.
+
+//machine translation:
+//I strongly do not recommend using this module in your solutions. In addition to the high price, you will get a gift of the need to filter values and possible errors.
+
 #include <ESP8266WiFi.h>
 #include "DHT.h"
 WiFiServer server(10050); 

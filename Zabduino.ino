@@ -23,14 +23,15 @@ void setup()
 
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
-  Serial.println("Connecting to Wifi");
+  Serial.println("\nWIFI:Connecting");
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);Serial.print(".");
   
-    if(millis()>=10000){
-      WiFi.beginWPSConfig(); 
-      Serial.println("WIFI: Trying WPS");
-      }
+        //U CAN USE WPS
+      //if(millis()>=10000){
+      //WiFi.beginWPSConfig(); 
+      //Serial.println("\nWIFI:Trying WPS");
+      //}
   }
   Serial.print("\nWIFI:Connected to ");
   Serial.println(ssid);
@@ -68,7 +69,7 @@ void loop()
         }
       }
 
-      key="";
+      key="";//the requested key
       for(int i=0;i!=pktsize;i++){
         dbx=client.read();
         if(debugflag)Serial.print(i);
@@ -92,10 +93,10 @@ void loop()
           client.write(toSend, 9);
           client.stop();
         }else if(key=="agent.version"){ //sending string
-          char text[]= "v0.2.2";
+          char text[]= "v0.2.2"; //service information!!!!
           byte toSend[]={(byte)String(text).length(), 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-          client.write(toSend, 8);
-          client.print(text);
+          client.write(toSend, 8);//header
+          client.print(text);     //useful block
           client.stop();
          } else if(key=="sensors.temperature.0"){ //sending float
           float temperature=65.33+random(-10,10);
@@ -111,7 +112,7 @@ void loop()
           client.stop();
           }
         
-        Serial.println("Client disconnected");       
+        Serial.println("SERVER:disconnected");       
     }
     
   }
