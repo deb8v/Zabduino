@@ -9,6 +9,13 @@ https://zabbix.org/wiki/Docs/protocols/zabbix_agent/3.2
 
 
   
+```mermaid
+graph LR
+A[ZBX SERVER] -- KEY --> B((SOCKET))
+
+B --- D{ARDUINO LOGIC}
+B -- RESPONSE --> A
+```
 
 # Usage  
 
