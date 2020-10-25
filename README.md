@@ -1,5 +1,5 @@
 # Zabduino, ZBX in Arduino
-
+[![CodeFactor](https://www.codefactor.io/repository/github/deb8v/zabduino/badge)](https://www.codefactor.io/repository/github/deb8v/zabduino)
 This project can be used to create for simple integration of your own modules in Zabbix.
    
 
