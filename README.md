@@ -1,5 +1,5 @@
 # Zabduino, ZBX in Arduino
-[![CodeFactor](https://www.codefactor.io/repository/github/deb8v/zabduino/badge)](https://www.codefactor.io/repository/github/deb8v/zabduino)
+
 This project can be used to create for simple integration of your own modules in Zabbix.
    
 
@@ -23,3 +23,6 @@ $ zabbix_get -s 8.8.8.8 -k sensors.temperature.0
 $ zabbix_get -s 8.8.8.8 -k who
 ```  
 ![d](https://sun1-93.userapi.com/1C6f-ki8h6_c7smSv_-wQj4rj1Erqd6pbimGeQ/PG2b3x8dMe0.jpg)
+
+
+[![CodeFactor](https://www.codefactor.io/repository/github/deb8v/zabduino/badge)](https://www.codefactor.io/repository/github/deb8v/zabduino)
